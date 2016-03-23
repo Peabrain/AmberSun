@@ -14,13 +14,16 @@ _ChunkyToPlanar:
 	move.l	#40*8,d1
 	sub.l	d0,d1
 	move.l	d1,_ChunkyLineAdd
-	
+	lsr.w	#2,d0
+	subq.w	#1,d0
+	move.w	d0,_ChunkyWidth
+
 	move.w	_ChunkyHigh,d0
 	subq.w	#1,d0
 .CnkLoop2:
 	swap	d0
 
-	move.w	#192/32-1,d0
+	move.w	_ChunkyWidth,d0
 .CnkLoop1:
 	move.l	(a0),d4		; d0 = a70,b70,c70,d70
 	move.l	16(a0),d5	; d1 = A70,B70,C70,D70

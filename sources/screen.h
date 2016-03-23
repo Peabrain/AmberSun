@@ -20,7 +20,7 @@ class	SCREEN
 {
 public:
 	SCREEN();
-	~SCREEN();
+	virtual ~SCREEN();
 	
 	bool	Init();
 	void	Deinit();

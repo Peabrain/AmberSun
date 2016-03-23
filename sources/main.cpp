@@ -1,4 +1,3 @@
-#include	<clib/exec_protos.h>
 #include	<clib/lowlevel_protos.h>
 #include	<inline/stubs.h>
 #include	<proto/intuition.h>
@@ -6,12 +5,8 @@
 #include	<stdio.h>
 #include	"screen.h"
 #include	"input.h"
+#include	"c2p.h"
 
-extern	unsigned int CnkBufferPtr;
-extern	unsigned int PlanarScreenPtr;
-extern	unsigned short ChunkyHigh;
-extern	unsigned short ChunkyWidth;
-extern	"C" void ChunkyToPlanar();
 
 int main()
 {
@@ -21,14 +16,16 @@ int main()
 	);
 
 	SCREEN	*myScreen = 0;
+	C2P		*myC2P = 0;
 
 	myScreen = new SCREEN();
 	if(myScreen->Init())
 	{
-		unsigned char *CnkBuffer = (unsigned char*)AllocMem(192*160,MEMF_ANY);
-		CnkBufferPtr = (unsigned int)CnkBuffer;
-		PlanarScreenPtr = (unsigned int)myScreen->GetBitPlane(0);
+		int	SizeX = 192;
+		int	SizeY = 160;
+		myC2P = new C2P();
 
+		myC2P->Init(SizeX,SizeY);
 
 		int h = 0;
 		while(1)
@@ -40,17 +37,20 @@ int main()
 			{
 			}
 
-			for(int j = 0;j < 160;j++)
-			for(int i = 0;i < 192;i++) CnkBuffer[j * 192 + i] = i + h;
-			ChunkyHigh = 160;
-			ChunkyWidth = 192/8;
-			ChunkyToPlanar();
+			unsigned char *CnkBuffer = myC2P->GetBuffer();
+			unsigned int Width = myC2P->GetWidth();
+			unsigned int Height = myC2P->GetHeight();
+			for(int j = 0;j < Height;j++)
+			for(int i = 0;i < Width;i++) CnkBuffer[j * Width + i] = i + h;
+
+			myC2P->Convert((unsigned int)myScreen->GetBitPlane(0));
+
 			h += 4;
 
 			if(isLeftMouseButtonPressed()) break;
 		}
 
-		FreeMem(CnkBuffer,192*160);
+		delete myC2P;
 		myScreen->Deinit();
 	}
 	delete myScreen;

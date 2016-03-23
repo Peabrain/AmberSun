@@ -86,13 +86,14 @@ File
 "/sources/main.cpp"
 "/sources/screen.h"
 "/sources/input.h"
+"/sources/c2p.h"
 Storm Shell Project (Dependencies)
 "objects/main.o" "objects/main.debug"
 ""
 1 1
 File
 1 "Data:AmberSun/sources/screen.cpp"
-"/sources/screen.cpp"
+"Data:AmberSun/sources/screen.cpp"
 "/sources/screen.h"
 Storm Shell Project (Dependencies)
 "objects/screen.o" "objects/screen.debug"
@@ -100,10 +101,18 @@ Storm Shell Project (Dependencies)
 1 1
 File
 1 "Data:AmberSun/sources/input.cpp"
-"/sources/input.cpp"
+"Data:AmberSun/sources/input.cpp"
 "/sources/input.h"
 Storm Shell Project (Dependencies)
 "objects/input.o" "objects/input.debug"
+""
+1 1
+File
+1 "Data:AmberSun/sources/c2p.cpp"
+"Data:AmberSun/sources/c2p.cpp"
+"/sources/c2p.h"
+Storm Shell Project (Dependencies)
+"objects/c2p.o" "objects/c2p.debug"
 ""
 1 1
 Section
@@ -120,6 +129,14 @@ Storm Shell Project (Dependencies)
 File
 2 "Data:AmberSun/sources/screen.h"
 "Data:AmberSun/sources/screen.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+0 0
+File
+2 "Data:AmberSun/sources/c2p.h"
+"Data:AmberSun/sources/chunky2planar.h"
+"Data:AmberSun/sources/c2p.h"
 Storm Shell Project (Dependencies)
 "" ""
 ""
