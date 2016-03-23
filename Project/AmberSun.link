@@ -19,18 +19,18 @@
 -
 -
 "Data:AmberSun/Project/objects/main.o"
-0,0,792,752,code_68k
+0,0,792,756,code_68k
 -
 -
 -
 -
 "Data:AmberSun/Project/objects/screen.o"
-0,0,1544,456,code_68k
+0,0,1548,456,code_68k
 -
 -
 -
 -
 5,2,176,8,bss
 "Data:AmberSun/Project/objects/chunky2planar.o"
-0,0,2000,768,code_68k
+0,0,2004,768,code_68k
 !0,792 ; _main

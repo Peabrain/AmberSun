@@ -30,20 +30,14 @@ int main()
 		int h = 0;
 		while(1)
 		{
-//			while(!(*((unsigned char*)0xdff005) & 1))
-			{
-			}
-//			while(*((unsigned char*)0xdff006) < 0x2a)
-			{
-			}
-
 			unsigned char *CnkBuffer = myC2P->GetBuffer();
 			unsigned int Width = myC2P->GetWidth();
 			unsigned int Height = myC2P->GetHeight();
-			for(int j = 0;j < Height;j++)
-			for(int i = 0;i < Width;i++) CnkBuffer[j * Width + i] = i + h;
+			for(int j = 0;j < Width;j++)
+				for(int i = 0;i < Height;i++)
+					CnkBuffer[i * Width + j] = j + h;
 
-			myC2P->Convert((unsigned int)myScreen->GetBitPlane(0) + 8 + 40 * 8 * (256 / 2 - Height / 2));
+			myC2P->Convert((unsigned int)myScreen->GetBitPlane(0) + 40 * 8 * (256 / 2 - Height / 2 - 32) + 8);
 
 			h += 4;
 

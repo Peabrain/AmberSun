@@ -85,7 +85,7 @@ Section
 4
 File
 1 "Data:AmberSun/sources/c2p.cpp"
-"/sources/c2p.cpp"
+"Data:AmberSun/sources/c2p.cpp"
 "/sources/c2p.h"
 Storm Shell Project (Dependencies)
 "objects/c2p.o" "objects/c2p.debug"
@@ -93,7 +93,7 @@ Storm Shell Project (Dependencies)
 1 1
 File
 1 "Data:AmberSun/sources/input.cpp"
-"/sources/input.cpp"
+"Data:AmberSun/sources/input.cpp"
 "/sources/input.h"
 Storm Shell Project (Dependencies)
 "objects/input.o" "objects/input.debug"
@@ -111,7 +111,7 @@ Storm Shell Project (Dependencies)
 1 1
 File
 1 "Data:AmberSun/sources/screen.cpp"
-"/sources/screen.cpp"
+"Data:AmberSun/sources/screen.cpp"
 "/sources/screen.h"
 Storm Shell Project (Dependencies)
 "objects/screen.o" "objects/screen.debug"
