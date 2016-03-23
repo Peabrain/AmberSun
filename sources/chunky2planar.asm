@@ -1,13 +1,22 @@
 	xdef	_ChunkyToPlanar
 	xdef	_PlanarScreenPtr
 	xdef	_CnkBufferPtr
+	xdef	_ChunkyHigh
+	xdef	_ChunkyWidth
 
 _ChunkyToPlanar:
 	movem.l	d2-d7/a2-a6,-(sp)
 	move.l	_PlanarScreenPtr,a1
 	move.l	_CnkBufferPtr,a0
 
-	move.w	#160-1,d0
+	eor.l	d0,d0
+	move.w	_ChunkyWidth,d0
+	move.l	#40*8,d1
+	sub.l	d0,d1
+	move.l	d1,_ChunkyLineAdd
+	
+	move.w	_ChunkyHigh,d0
+	subq.w	#1,d0
 .CnkLoop2:
 	swap	d0
 
@@ -293,7 +302,7 @@ _ChunkyToPlanar:
 	addq.l	#4,a1
 
 	dbf	d0,.CnkLoop1
-	add.l	#296,a1
+	add.l	_ChunkyLineAdd,a1
 	swap	d0
 	dbf	d0,.CnkLoop2
 .exit:
@@ -303,4 +312,10 @@ _ChunkyToPlanar:
 _CnkBufferPtr:
 	dc.l	0
 _PlanarScreenPtr:
+	dc.l	0
+_ChunkyHigh:
+	dc.w	0
+_ChunkyWidth:
+	dc.w	0
+_ChunkyLineAdd:
 	dc.l	0

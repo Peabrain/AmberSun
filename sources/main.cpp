@@ -9,6 +9,8 @@
 
 extern	unsigned int CnkBufferPtr;
 extern	unsigned int PlanarScreenPtr;
+extern	unsigned short ChunkyHigh;
+extern	unsigned short ChunkyWidth;
 extern	"C" void ChunkyToPlanar();
 
 int main()
@@ -40,6 +42,8 @@ int main()
 
 			for(int j = 0;j < 160;j++)
 			for(int i = 0;i < 192;i++) CnkBuffer[j * 192 + i] = i + h;
+			ChunkyHigh = 160;
+			ChunkyWidth = 192/8;
 			ChunkyToPlanar();
 			h += 4;
 
