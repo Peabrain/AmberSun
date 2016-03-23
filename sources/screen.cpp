@@ -38,6 +38,8 @@ bool	SCREEN::Init()
 		for(i = 0;i < 256;i++)
 			SetRGB32(&myScreen->ViewPort,i,i<<24,i<<24,i<<24);
 
+	ScreenToFront(myScreen);
+
 		return true;
 	}
 	return false;
