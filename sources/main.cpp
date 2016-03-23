@@ -9,7 +9,7 @@
 
 extern	unsigned int CnkBufferPtr;
 extern	unsigned int PlanarScreenPtr;
-extern	"C" void test();
+extern	"C" void ChunkyToPlanar();
 
 int main()
 {
@@ -40,7 +40,7 @@ int main()
 
 			for(int j = 0;j < 160;j++)
 			for(int i = 0;i < 192;i++) CnkBuffer[j * 192 + i] = i + h;
-			test();
+			ChunkyToPlanar();
 			h += 4;
 
 			if(isLeftMouseButtonPressed()) break;

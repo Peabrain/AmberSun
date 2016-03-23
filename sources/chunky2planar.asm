@@ -1,8 +1,8 @@
-	xdef	_test
+	xdef	_ChunkyToPlanar
 	xdef	_PlanarScreenPtr
 	xdef	_CnkBufferPtr
 
-_test:
+_ChunkyToPlanar:
 	movem.l	d2-d7/a2-a6,-(sp)
 	move.l	_PlanarScreenPtr,a1
 	move.l	_CnkBufferPtr,a0
