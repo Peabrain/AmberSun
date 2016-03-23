@@ -5,7 +5,7 @@ C/C++ Environment
 0
 Includepath (End)
 0 "" 80
-1 "objects_debug"
+1 "objects"
 1 0 "makelog.txt"
 ""
 0
@@ -13,13 +13,13 @@ Includepath (End)
 0
 0 0
 C/C++ Preprozessor
-0 "NDEBUG" ""
+1 "NDEBUG" ""
 0
 Defines (End)
 1 1 1
 0 0
 C/C++ Options
-1 1 1 2 1 0 0 0 1 0 0 0 0 0 0
+1 1 1 1 0 0 0 0 0 1 0 0 0 0 0
 0 0 0
 0
 0 1 0
@@ -29,16 +29,14 @@ C/C++ Warnings
 1 1 1 1 1 1 0 1
 0 0
 GCC Options (1)
-0 "NDEBUG" ""
-0
 Defines (End)
 1 0 0 1 0
 3 0 0 1 1 1 0
-0 0 0 0 0
-0 0 1 0 1 0 0
-1 1 0 0
+0 1 0 0 0
+0 0 0 0 1 0 0
+1 0 0 0
 0 ""
-2 1 1 0
+3 1 0 0
 1 0 0 1 0 1 0 1 0 1
 1 1 0 1 0 1
 0 1 1 1 1 0 0
@@ -54,8 +52,8 @@ Sets (End)
 1 0
 0 0 0 0 0
 Linker
-0 0 "PROGDIR:startup.o" 0 0 1 0 1 0 0
-"StormC:lib/" 0 "StormC:lib/logfile" 0 0 0
+0 0 "PROGDIR:startup.o" 0 0 1 0 0 0 0
+"StormC:lib/" 0 "StormC:lib/logfile" 0 1 1
 0 "_WizardSurface"
 0 0 50 0 50 0 50 0 0
 0 0 0 0 0 0 0 0
@@ -89,7 +87,7 @@ File
 "/sources/screen.h"
 "/sources/input.h"
 Storm Shell Project (Dependencies)
-"objects_debug/main.o" "objects_debug/main.debug"
+"objects/main.o" "objects/main.debug"
 ""
 1 1
 File
@@ -97,7 +95,7 @@ File
 "/sources/screen.cpp"
 "/sources/screen.h"
 Storm Shell Project (Dependencies)
-"objects_debug/screen.o" "objects_debug/screen.debug"
+"objects/screen.o" "objects/screen.debug"
 ""
 1 1
 File
@@ -105,7 +103,7 @@ File
 "/sources/input.cpp"
 "/sources/input.h"
 Storm Shell Project (Dependencies)
-"objects_debug/input.o" "objects_debug/input.debug"
+"objects/input.o" "objects/input.debug"
 ""
 1 1
 Section
@@ -113,15 +111,15 @@ Section
 0 1 1 0
 2
 File
-2 "Data:AmberSun/sources/screen.h"
-"Data:AmberSun/sources/screen.h"
+2 "Data:AmberSun/sources/input.h"
+"Data:AmberSun/sources/input.h"
 Storm Shell Project (Dependencies)
 "" ""
 ""
 0 0
 File
-2 "Data:AmberSun/sources/input.h"
-"Data:AmberSun/sources/input.h"
+2 "Data:AmberSun/sources/screen.h"
+"Data:AmberSun/sources/screen.h"
 Storm Shell Project (Dependencies)
 "" ""
 ""
@@ -134,7 +132,7 @@ File
 12 "Data:AmberSun/sources/chunky2planar.asm"
 "Data:AmberSun/sources/chunky2planar.asm"
 Storm Shell Project (Dependencies)
-"objects_debug/chunky2planar.o" ""
+"objects/chunky2planar.o" ""
 ""
 1 1
 Section
@@ -162,13 +160,6 @@ Storm Shell Project (Dependencies)
 File
 5 "amiga.lib"
 "amiga.lib"
-Storm Shell Project (Dependencies)
-"" ""
-""
-0 0
-File
-5 "debug.lib"
-"debug.lib"
 Storm Shell Project (Dependencies)
 "" ""
 ""
