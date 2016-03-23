@@ -29,6 +29,8 @@ C/C++ Warnings
 1 1 1 1 1 1 0 1
 0 0
 GCC Options (1)
+0 "NDEBUG" ""
+0
 Defines (End)
 1 0 0 1 0
 3 0 0 1 1 1 0
@@ -82,6 +84,22 @@ Section
 0 1 1 0
 4
 File
+1 "Data:AmberSun/sources/c2p.cpp"
+"/sources/c2p.cpp"
+"/sources/c2p.h"
+Storm Shell Project (Dependencies)
+"objects/c2p.o" "objects/c2p.debug"
+""
+1 1
+File
+1 "Data:AmberSun/sources/input.cpp"
+"/sources/input.cpp"
+"/sources/input.h"
+Storm Shell Project (Dependencies)
+"objects/input.o" "objects/input.debug"
+""
+1 1
+File
 1 "Data:AmberSun/sources/main.cpp"
 "/sources/main.cpp"
 "/sources/screen.h"
@@ -93,32 +111,23 @@ Storm Shell Project (Dependencies)
 1 1
 File
 1 "Data:AmberSun/sources/screen.cpp"
-"Data:AmberSun/sources/screen.cpp"
+"/sources/screen.cpp"
 "/sources/screen.h"
 Storm Shell Project (Dependencies)
 "objects/screen.o" "objects/screen.debug"
-""
-1 1
-File
-1 "Data:AmberSun/sources/input.cpp"
-"Data:AmberSun/sources/input.cpp"
-"/sources/input.h"
-Storm Shell Project (Dependencies)
-"objects/input.o" "objects/input.debug"
-""
-1 1
-File
-1 "Data:AmberSun/sources/c2p.cpp"
-"Data:AmberSun/sources/c2p.cpp"
-"/sources/c2p.h"
-Storm Shell Project (Dependencies)
-"objects/c2p.o" "objects/c2p.debug"
 ""
 1 1
 Section
 2 1 95
 0 1 1 0
 2
+File
+2 "Data:AmberSun/sources/c2p.h"
+"Data:AmberSun/sources/c2p.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+0 0
 File
 2 "Data:AmberSun/sources/input.h"
 "Data:AmberSun/sources/input.h"
@@ -129,14 +138,6 @@ Storm Shell Project (Dependencies)
 File
 2 "Data:AmberSun/sources/screen.h"
 "Data:AmberSun/sources/screen.h"
-Storm Shell Project (Dependencies)
-"" ""
-""
-0 0
-File
-2 "Data:AmberSun/sources/c2p.h"
-"Data:AmberSun/sources/chunky2planar.h"
-"Data:AmberSun/sources/c2p.h"
 Storm Shell Project (Dependencies)
 "" ""
 ""

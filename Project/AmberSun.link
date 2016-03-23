@@ -5,27 +5,27 @@
 -
 -
 5,2,164,4,bss
-"Data:AmberSun/Project/objects/main.o"
-0,0,464,752,code_68k
--
--
--
--
-"Data:AmberSun/Project/objects/screen.o"
-0,0,1216,456,code_68k
+"Data:AmberSun/Project/objects/c2p.o"
+0,0,464,308,code_68k
 -
 -
 -
 -
 5,2,168,8,bss
 "Data:AmberSun/Project/objects/input.o"
-0,0,1672,20,code_68k
+0,0,772,20,code_68k
 -
 -
 -
 -
-"Data:AmberSun/Project/objects/c2p.o"
-0,0,1692,308,code_68k
+"Data:AmberSun/Project/objects/main.o"
+0,0,792,752,code_68k
+-
+-
+-
+-
+"Data:AmberSun/Project/objects/screen.o"
+0,0,1544,456,code_68k
 -
 -
 -
@@ -33,4 +33,4 @@
 5,2,176,8,bss
 "Data:AmberSun/Project/objects/chunky2planar.o"
 0,0,2000,768,code_68k
-!0,464 ; _main
+!0,792 ; _main
