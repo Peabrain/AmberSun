@@ -87,6 +87,7 @@ File
 1 "Data:AmberSun/sources/main.cpp"
 "/sources/main.cpp"
 "/sources/screen.h"
+"/sources/input.h"
 Storm Shell Project (Dependencies)
 "objects_debug/main.o" "objects_debug/main.debug"
 ""
@@ -97,6 +98,14 @@ File
 "/sources/screen.h"
 Storm Shell Project (Dependencies)
 "objects_debug/screen.o" "objects_debug/screen.debug"
+""
+1 1
+File
+1 "Data:AmberSun/sources/input.cpp"
+"/sources/input.cpp"
+"/sources/input.h"
+Storm Shell Project (Dependencies)
+"objects_debug/input.o" "objects_debug/input.debug"
 ""
 1 1
 Section
@@ -110,6 +119,24 @@ Storm Shell Project (Dependencies)
 "" ""
 ""
 0 0
+File
+2 "Data:AmberSun/sources/input.h"
+"Data:AmberSun/sources/input.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+0 0
+Section
+12 1 90
+0 1 1 0
+4
+File
+12 "Data:AmberSun/sources/chunky2planar.asm"
+"Data:AmberSun/sources/chunky2planar.asm"
+Storm Shell Project (Dependencies)
+"objects_debug/chunky2planar.o" ""
+""
+1 1
 Section
 10 1 40
 0 0 0 0

@@ -1,106 +1,48 @@
+#include	<sys/cdefs.h>
+#include	<inline/stubs.h>
 #include	<proto/intuition.h>
 #include	<proto/dos.h>
 #include	<stdio.h>
 #include	"screen.h"
 #include	"input.h"
 
+extern	unsigned int CnkBufferPtr;
+extern	unsigned int PlanarScreenPtr;
+extern	"C" void test();
+
+//unsigned char	scr[40*256*8];
+unsigned char	CnkBuffer[256*128];
 int main()
 {
+
 	SCREEN	*myScreen = 0;
 
 	myScreen = new SCREEN();
 	if(myScreen->Init())
 	{
-		unsigned int *p[8];
-		int i;
-		for(i = 0;i < 8;i++) p[i] = myScreen->GetBitPlane(i);
+		CnkBufferPtr = (unsigned int)&CnkBuffer[0];
+		PlanarScreenPtr = (unsigned int)myScreen->GetBitPlane(0);
 
-		i = 0;
-		p[0][i] = 0x55555555;
-		p[1][i] = 0x33333333;
-		p[2][i] = 0x0f0f0f0f;
-		p[3][i] = 0x00ff00ff;
-		p[4][i] = 0x0000ffff;
-		p[5][i] = 0x00000000;
-		p[6][i] = 0x00000000;
-		p[7][i] = 0x00000000;
-		i++;
-
-		p[0][i] = 0x55555555;
-		p[1][i] = 0x33333333;
-		p[2][i] = 0x0f0f0f0f;
-		p[3][i] = 0x00ff00ff;
-		p[4][i] = 0x0000ffff;
-		p[5][i] = 0xffffffff;
-		p[6][i] = 0x00000000;
-		p[7][i] = 0x00000000;
-		i++;
-
-		p[0][i] = 0x55555555;
-		p[1][i] = 0x33333333;
-		p[2][i] = 0x0f0f0f0f;
-		p[3][i] = 0x00ff00ff;
-		p[4][i] = 0x0000ffff;
-		p[5][i] = 0x00000000;
-		p[6][i] = 0xffffffff;
-		p[7][i] = 0x00000000;
-		i++;
-
-		p[0][i] = 0x55555555;
-		p[1][i] = 0x33333333;
-		p[2][i] = 0x0f0f0f0f;
-		p[3][i] = 0x00ff00ff;
-		p[4][i] = 0x0000ffff;
-		p[5][i] = 0xffffffff;
-		p[6][i] = 0xffffffff;
-		p[7][i] = 0x00000000;
-		i++;
-
-		p[0][i] = 0x55555555;
-		p[1][i] = 0x33333333;
-		p[2][i] = 0x0f0f0f0f;
-		p[3][i] = 0x00ff00ff;
-		p[4][i] = 0x0000ffff;
-		p[5][i] = 0x00000000;
-		p[6][i] = 0x00000000;
-		p[7][i] = 0xffffffff;
-		i++;
-
-		p[0][i] = 0x55555555;
-		p[1][i] = 0x33333333;
-		p[2][i] = 0x0f0f0f0f;
-		p[3][i] = 0x00ff00ff;
-		p[4][i] = 0x0000ffff;
-		p[5][i] = 0xffffffff;
-		p[6][i] = 0x00000000;
-		p[7][i] = 0xffffffff;
-		i++;
-
-		p[0][i] = 0x55555555;
-		p[1][i] = 0x33333333;
-		p[2][i] = 0x0f0f0f0f;
-		p[3][i] = 0x00ff00ff;
-		p[4][i] = 0x0000ffff;
-		p[5][i] = 0x00000000;
-		p[6][i] = 0xffffffff;
-		p[7][i] = 0xffffffff;
-		i++;
-
-		p[0][i] = 0x55555555;
-		p[1][i] = 0x33333333;
-		p[2][i] = 0x0f0f0f0f;
-		p[3][i] = 0x00ff00ff;
-		p[4][i] = 0x0000ffff;
-		p[5][i] = 0xffffffff;
-		p[6][i] = 0xffffffff;
-		p[7][i] = 0xffffffff;
-		i++;
-
-		while(!isLeftMouseButtonPressed())
+		Delay(200);
+		int h = 0;
+		while(1)
 		{
-			Delay(10);
+//			while(!(*((unsigned char*)0xdff005) & 1))
+			{
+			}
+//			while(*((unsigned char*)0xdff006) < 0x2a)
+			{
+			}
+
+			for(int j = 0;j < 128;j++)
+			for(int i = 0;i < 256;i++) CnkBuffer[j * 256 + i] = i + h;
+			test();
+			h++;
+
+			if(isLeftMouseButtonPressed()) break;
 		}
 
 		myScreen->Deinit();
 	}
+	delete myScreen;
 }
