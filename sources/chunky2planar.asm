@@ -7,11 +7,11 @@ _test:
 	move.l	_PlanarScreenPtr,a1
 	move.l	_CnkBufferPtr,a0
 
-	move.w	#128-1,d0
+	move.w	#160-1,d0
 .CnkLoop2:
 	swap	d0
 
-	move.w	#256/32-1,d0
+	move.w	#192/32-1,d0
 .CnkLoop1:
 	move.l	(a0),d4		; d0 = a70,b70,c70,d70
 	move.l	16(a0),d5	; d1 = A70,B70,C70,D70
@@ -293,7 +293,7 @@ _test:
 	addq.l	#4,a1
 
 	dbf	d0,.CnkLoop1
-	add.l	#288,a1
+	add.l	#296,a1
 	swap	d0
 	dbf	d0,.CnkLoop2
 .exit:
