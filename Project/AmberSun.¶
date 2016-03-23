@@ -92,6 +92,14 @@ Storm Shell Project (Dependencies)
 ""
 1 1
 File
+1 "Data:AmberSun/sources/texture.cpp"
+"/sources/texture.cpp"
+"/sources/texture.h"
+Storm Shell Project (Dependencies)
+"objects/texture.o" "objects/texture.debug"
+""
+1 1
+File
 1 "Data:AmberSun/sources/input.cpp"
 "Data:AmberSun/sources/input.cpp"
 "/sources/input.h"
@@ -101,10 +109,11 @@ Storm Shell Project (Dependencies)
 1 1
 File
 1 "Data:AmberSun/sources/main.cpp"
-"/sources/main.cpp"
+"Data:AmberSun/sources/main.cpp"
 "/sources/screen.h"
 "/sources/input.h"
 "/sources/c2p.h"
+"/sources/texture.h"
 Storm Shell Project (Dependencies)
 "objects/main.o" "objects/main.debug"
 ""
@@ -138,6 +147,13 @@ Storm Shell Project (Dependencies)
 File
 2 "Data:AmberSun/sources/screen.h"
 "Data:AmberSun/sources/screen.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+0 0
+File
+2 "Data:AmberSun/sources/texture.h"
+"Data:AmberSun/sources/texture.h"
 Storm Shell Project (Dependencies)
 "" ""
 ""
