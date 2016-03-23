@@ -11,10 +11,10 @@
 
 int main()
 {
-//	SystemControl(
-//	SCON_TakeOverSys,TRUE,
-//	SCON_StopInput,TRUE
-//	);
+	SystemControl(
+	SCON_TakeOverSys,TRUE,
+	SCON_StopInput,TRUE
+	);
 
 	SCREEN	*myScreen = 0;
 	C2P		*myC2P = 0;
