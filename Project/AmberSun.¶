@@ -93,7 +93,7 @@ Storm Shell Project (Dependencies)
 1 1
 File
 1 "Data:AmberSun/sources/texture.cpp"
-"/sources/texture.cpp"
+"Data:AmberSun/sources/texture.cpp"
 "/sources/texture.h"
 Storm Shell Project (Dependencies)
 "objects/texture.o" "objects/texture.debug"
