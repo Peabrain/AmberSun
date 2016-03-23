@@ -46,7 +46,6 @@ int main()
 			clock_t nextFrame = clock();
 			double diffFrame = difftime(nextFrame,beginFrame);
 			beginFrame = nextFrame;
-			printf("%f\n",diffFrame);
 
 			xOrgadd = (int)(256.0 * diffFrame);
 
