@@ -43,7 +43,7 @@ int main()
 			for(int j = 0;j < Height;j++)
 			for(int i = 0;i < Width;i++) CnkBuffer[j * Width + i] = i + h;
 
-			myC2P->Convert((unsigned int)myScreen->GetBitPlane(0));
+			myC2P->Convert((unsigned int)myScreen->GetBitPlane(0) + 8 + 40 * 8 * (256 / 2 - Height / 2));
 
 			h += 4;
 
